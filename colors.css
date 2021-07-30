@@ -1,0 +1,68 @@
+.base-colors { 
+  display: flex;
+  justify-content: center;
+}
+.color-scheme {
+  padding: 4em;
+  display: flex;
+  flex-wrap: wrap;
+}
+  .color-scheme>span {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+  }
+  .color-box:hover {
+    transform: scale(1, 1.4);
+    transition: all 0.4s ease-in-out;
+    z-index: 9;
+  }
+  .base-color  {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 4px;
+  }
+  
+  .color-name {
+    background-color: #ffffff63;
+    padding: 10px;
+  }
+  .color-box {
+    display: block;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+    padding: 50px;
+    margin: 2px;
+    border-radius: 2px;
+    /* filter: drop-shadow(0 0 0.15rem #ccc); */
+  }
+.active-colorblock, .base-color:hover {
+  transform: scale(1, 1.2);
+  border-radius: 10px 0px;
+  transition: all 0.4s ease-in-out;
+
+}
+.active-colorblock::after {
+  content: "\2713";
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 900;
+}
+.color-title {
+  text-align: center;
+  padding: 50px 0px 20px;
+}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      left: 0;
+    }
+    to {
+      opacity: 100%;
+      left: 500px;
+
+    }
+  }
+ 
